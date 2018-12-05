@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Table" max_length="40" name="x_snc_generic_table" type="collection">
+        <element label="Field 1" max_length="40" name="field_1" type="string"/>
+        <element label="Field 2" max_length="40" name="field_2" type="string"/>
+        <element label="Field 3" max_length="40" name="field_3" type="string"/>
+        <element label="Field 4" max_length="40" name="field_4" type="string"/>
+        <element label="Field 5" max_length="40" name="field_5" type="string"/>
+    </element>
+</database>
