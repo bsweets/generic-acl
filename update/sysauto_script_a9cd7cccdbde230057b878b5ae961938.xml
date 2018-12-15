@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sysauto_script">
+    <sysauto_script action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition/>
+        <conditional>false</conditional>
+        <name>Web Service Call to NeedIt</name>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek>1</run_dayofweek>
+        <run_period/>
+        <run_start>2018-12-05 19:27:19</run_start>
+        <run_time>1970-01-01 08:00:00</run_time>
+        <run_type>on_demand</run_type>
+        <script><![CDATA[var request = new sn_ws.RESTMessageV2();
+request.setEndpoint('https://empbsweetsmadrid.service-now.com/api/now/table/x_58872_needit_needit?sysparm_limit=10');
+request.setHttpMethod('GET');
+
+//Eg. UserName="admin", Password="admin" for this code sample.
+var user = 'beth.anglin';
+var password = 'admin';
+
+request.setBasicAuth(user,password);
+request.setRequestHeader("Accept","application/json");
+
+var response = request.execute();
+gs.info(response.getBody());]]></script>
+        <sys_class_name>sysauto_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-05 19:27:52</sys_created_on>
+        <sys_id>a9cd7cccdbde230057b878b5ae961938</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Web Service Call to NeedIt</sys_name>
+        <sys_package display_value="Generic" source="x_snc_generic">a367b7e7db46230057b878b5ae96197f</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Generic">a367b7e7db46230057b878b5ae96197f</sys_scope>
+        <sys_update_name>sysauto_script_a9cd7cccdbde230057b878b5ae961938</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-05 19:29:26</sys_updated_on>
+        <upgrade_safe>false</upgrade_safe>
+    </sysauto_script>
+</record_update>
